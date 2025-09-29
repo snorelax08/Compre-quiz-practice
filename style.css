@@ -4,9 +4,11 @@ body {
     color: #333;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start; /* Align to top for smaller screens */
     min-height: 100vh;
     margin: 0;
+    padding: 15px;
+    box-sizing: border-box;
 }
 
 .container {
@@ -14,13 +16,18 @@ body {
     border-radius: 10px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     padding: 30px;
-    width: 90%;
+    width: 100%; /* Make width flexible */
     max-width: 800px;
     text-align: center;
+    box-sizing: border-box;
 }
 
 h1 {
     color: #0056b3;
+}
+
+h2 {
+    font-size: 1.5rem;
 }
 
 .hidden {
@@ -106,4 +113,29 @@ h1 {
     justify-content: space-between;
     font-size: 1.1rem;
     color: #555;
+}
+
+/* --- NEW RESPONSIVE RULES --- */
+/* This code applies only to screens 768px wide or smaller (tablets and phones) */
+@media (max-width: 768px) {
+    body {
+        padding: 10px; /* Reduce padding on small screens */
+    }
+
+    .container {
+        padding: 20px; /* Reduce padding inside the card */
+    }
+
+    h1 {
+        font-size: 1.8rem; /* Make the main title smaller */
+    }
+    
+    h2 {
+        font-size: 1.2rem; /* Make question text smaller */
+    }
+
+    .option-btn, #next-btn {
+        padding: 12px;
+        font-size: 1rem; /* Adjust button text size */
+    }
 }
