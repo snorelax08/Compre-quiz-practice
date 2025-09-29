@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comprehensive Exam Prep</title>
+    
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <div class="container">
+        <h1>Exam Preparation Quiz</h1>
+        
+        <div id="menu-container">
+            <h2>Select a Quiz Mode</h2>
+            <button onclick="startRandomQuiz()">Start Random Quiz (All Questions)</button>
+            <h3>Or Practice a Specific Block:</h3>
+            <div id="block-buttons">
+                </div>
+        </div>
+
+        <div id="quiz-container" class="hidden">
+            <div id="progress-container">
+                <p>Question <span id="question-number"></span> of <span id="total-questions"></span></p>
+                <p>Score: <span id="score">0</span></p>
+            </div>
+            <h2 id="question-text">Question text goes here...</h2>
+            <div id="options-container">
+                </div>
+            <button id="next-btn" class="hidden">Next Question</button>
+            <div id="feedback"></div>
+        </div>
+    </div>
+
+    <script src="questions.js"></script>
+    <script src="script.js"></script>
+
+</body>
+</html>
